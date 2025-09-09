@@ -18,10 +18,11 @@ class ProductController extends Controller
             return 'Detail products: ' . $id . ". With category: " . $category;
         } else {
             return 'Detail products: ' . $id;
+        }
     }
 
-    function create(){
-            return "FORM FOR CREATE PRODUCTS";
-        }
+    function create()
+    {
+        return "FORM FOR CREATE PRODUCTS";
     }
 }
