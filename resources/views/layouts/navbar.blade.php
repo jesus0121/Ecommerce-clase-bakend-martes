@@ -1,9 +1,11 @@
-<nav class="navbar">
-    <div class="logo">MyEcommerce</div>
-    <ul class="nav-links">
-        <li><a href="/products">Inicio</a></li>
-        <li><a href="/products/100/tecnologia">Detalles</a></li>
-        <li><a href="/products/create">Agregar Producto</a></li>
-        <li><a href="#">Contacto</a></li>
-    </ul>
+<!-- NAVBAR -->
+<nav>
+  <div>
+    <a href="{{ url("/products")}}">🛒 MiEcommerce</a>
+  </div>
+  <ul>
+    <li><a href="{{ url('/products') }}">Inicio</a></li>
+    <li><a href="{{ "/products/100" }}">Detalles</a></li>
+    <li><a href="{{ url('/products/create') }}">Añadir Producto</a></li>
+  </ul>
 </nav>
