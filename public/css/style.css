@@ -78,7 +78,7 @@ footer a:hover {
 .product-card {
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 15px;
   text-align: center;
   transition: transform 0.2s ease;
@@ -101,7 +101,7 @@ footer a:hover {
 
 .product-card .brand {
   font-size: 14px;
-  color: #000000;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
@@ -136,7 +136,7 @@ footer a:hover {
   background: #000000;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(255, 252, 252, 0.1);
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -185,7 +185,7 @@ footer a:hover {
 
 /* === FORMULARIO DE PRODUCTOS === */
 .form-container {
-  background: #fff;
+  background: #ffffff;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -253,15 +253,15 @@ nav a:hover {
 .login-card {
   width: 400px;
   background: #ffffff;
-  border: 1px solid #ddd;
+  border: 1px solid #000000;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
 
 .login-header {
-  background: #f7f7f7;
-  border-bottom: 1px solid #ddd;
+  background: #000000;
+  border-bottom: 1px solid #000000;
   font-weight: bold;
   padding: 12px 20px;
   font-size: 16px;
@@ -279,7 +279,7 @@ nav a:hover {
 .login-label {
   display: block;
   font-weight: bold;
-  color: #333;
+  color: #000000;
   margin-bottom: 6px;
   font-size: 14px;
 }
@@ -311,7 +311,7 @@ nav a:hover {
 
 .login-remember-label {
   font-size: 14px;
-  color: #333;
+  color: #000000;
 }
 
 .login-actions {
@@ -322,7 +322,7 @@ nav a:hover {
 
 .login-btn {
   background: #007bff;
-  color: #fff;
+  color: #000000;
   border: none;
   padding: 8px 18px;
   border-radius: 6px;
@@ -351,12 +351,12 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   min-height: 80vh;
-  background: #fff; /* fondo blanco solo del contenido */
+  background: #ffffff; /* fondo blanco solo del contenido */
 }
 
 .register-card {
   width: 420px;
-  border: 1px solid #ddd;
+  border: 1px solid #000000;
   border-radius: 8px;
   padding: 30px;
   background: #ffffff;
@@ -370,7 +370,7 @@ nav a:hover {
 
 .form-label {
   font-weight: 600;
-  color: #333;
+  color: #000000;
 }
 
 .form-control {
@@ -390,3 +390,30 @@ nav a:hover {
 .btn-primary:hover {
   background-color: #0056b3;
 }
+
+/* === CORRECCIÓN DE COLOR DE TEXTO === */
+.products-container,
+.product-card,
+.product-card h2,
+.product-card .brand,
+.product-card .price {
+  color: #000000 !important;
+}
+
+.product-card .brand {
+  color: #ca2e2e !important; /* gris para diferenciar la marca */
+}
+
+.btn {
+  color: #ffffff !important; /* botón con texto blanco */
+}
+
+/* === CORRECCIÓN DE COLOR DEL TÍTULO === */
+h1, h2, h3 {
+  color: #000000 !important;
+}
+
+.page-title {
+  color: #000000 !important;
+}
+
