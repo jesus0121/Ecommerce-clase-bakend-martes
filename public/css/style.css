@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background: #f8f8f8;
-  color: #333;
+  color: #ffffff;
 }
 
 h1, h2, h3 {
@@ -18,7 +18,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+  color: #ffffff;
 }
 
 nav .logo {
@@ -35,27 +35,27 @@ nav ul {
 }
 
 nav ul li a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-size: 15px;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #00b4d8;
+  color: #000000;
 }
 
 /* === FOOTER === */
 footer {
-  background: #222;
-  color: #fff;
+  background: #000000;
+  color: #000000;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
 }
 
 footer a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   margin: 0 10px;
   transition: color 0.3s ease;
@@ -76,7 +76,7 @@ footer a:hover {
 }
 
 .product-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   padding: 15px;
@@ -101,7 +101,7 @@ footer a:hover {
 
 .product-card .brand {
   font-size: 14px;
-  color: #555;
+  color: #000000;
   margin-bottom: 10px;
 }
 
@@ -115,8 +115,8 @@ footer a:hover {
 .btn {
   display: inline-block;
   padding: 10px 15px;
-  background: #0077b6;
-  color: #fff;
+  background: #000000;
+  color: #000000;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -126,14 +126,14 @@ footer a:hover {
 }
 
 .btn:hover {
-  background: #023e8a;
+  background: #050505;
 }
 
 /* === DETALLES DEL PRODUCTO === */
 .container {
   max-width: 1100px;
   margin: 40px auto;
-  background: #fff;
+  background: #000000;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -165,7 +165,7 @@ footer a:hover {
 
 .product-details .brand {
   font-size: 16px;
-  color: #555;
+  color: #000000;
   margin-bottom: 15px;
 }
 
@@ -178,7 +178,7 @@ footer a:hover {
 
 .product-details .description {
   font-size: 16px;
-  color: #333;
+  color: #000000;
   line-height: 1.5;
   margin-bottom: 25px;
 }
@@ -197,14 +197,14 @@ footer a:hover {
 .form-container h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #000000;
 }
 
 label {
   display: block;
   margin: 10px 0 5px;
   font-weight: bold;
-  color: #444;
+  color: #000000;
 }
 
 input, textarea, select {
@@ -239,4 +239,154 @@ nav a:visited {
 
 nav a:hover {
   color: #ff9800;         /* Color al pasar el mouse */
+}
+
+/* === LOGIN PAGE === */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background: #ffffff;
+}
+
+.login-card {
+  width: 400px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.login-header {
+  background: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+  padding: 12px 20px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.login-body {
+  padding: 25px 30px;
+}
+
+.login-group {
+  margin-bottom: 15px;
+}
+
+.login-label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.login-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+.login-error {
+  color: #e63946;
+  font-size: 13px;
+  margin-top: 5px;
+  display: block;
+}
+
+.login-remember {
+  margin-bottom: 15px;
+}
+
+.login-remember-label {
+  font-size: 14px;
+  color: #333;
+}
+
+.login-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #0056b3;
+}
+
+.login-link {
+  font-size: 13px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* === ESTILO SOLO PARA REGISTER === */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: #fff; /* fondo blanco solo del contenido */
+}
+
+.register-card {
+  width: 420px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.register-title {
+  font-weight: bold;
+  color: #000;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.form-control {
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
 }
