@@ -233,9 +233,10 @@ nav a {
   text-decoration: none;  /* Quitar subrayado */
 }
 
-nav a:visited {
-  color: #fff;            /* Evitar morado en enlaces visitados */
+.dropdown-item {
+  color: #000;
 }
+
 
 nav a:hover {
   color: #ff9800;         /* Color al pasar el mouse */

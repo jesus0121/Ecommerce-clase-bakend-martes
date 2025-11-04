@@ -1,4 +1,4 @@
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     <img src="{{ asset('images/logo-unab1.png') }}" alt="Logo" style="height:40px; margin-right:8px;">
@@ -12,8 +12,7 @@
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+
                     </ul>
 
                     <ul class="navbar-nav ms-auto">
@@ -41,7 +40,13 @@
                             
                             
                         @else
+                        @if (Route::has('admin.index'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('admin.index') }}">Admin</a>
+                                </li>
+                            @endif
                             <li class="nav-item dropdown">
+                                
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
