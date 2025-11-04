@@ -16,12 +16,13 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->decimal('price');
-            $table->string('url_image');
+            //$table->string('url_image');
             //$table->string('category');
             $table->timestamps();
 
 
             $table->foreignId('category_id')->references('id')->on('categories');
+            $table->foreignId('brand_id')->references('id')->on('brand');
         });
 
 
