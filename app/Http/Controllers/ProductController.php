@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Brand;
+use App\Models\Category;
 
 class ProductController extends Controller
 {
@@ -15,18 +17,23 @@ class ProductController extends Controller
     {
         if ($category != null) {
             return view("products.detail", [
-                'id'=> $id, 
-                'category'=>$category
+                'id' => $id,
+                'category' => $category
             ]);
         } else {
             $category = "";
             return view("products.detail", compact('id', 'category'));
         }
-        
+
     }
 
     function create()
     {
-        return view("products.create");
+        $brands = Brand::all();
+        $categories = Category::all();
+        return view("products.create",[
+            'brands' => $brands,
+            'categories' => $categories
+        ]);
     }
 }

@@ -11,14 +11,6 @@ class CategorySeeder extends Seeder
 
     public function run(): void
     {
-        $categoryPhones = new Category();
-        $categoryPhones->name = 'Phones';
-        $categoryPhones->save();
-
-        $categoryComputers = new Category();
-        $categoryComputers->name = 'Computers';
-        $categoryComputers->save();
-
-        Category::factory(200)->create();
+        Category::factory(20)->create();
     }
 }
