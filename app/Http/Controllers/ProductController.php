@@ -60,7 +60,7 @@ class ProductController extends Controller
     }
     public function table(){
 
-        $products = Product::all();
+        $products = Product::orderBy('id', 'desc')->paginate(10);
 
         return view('products.table',[
             'products' => $products
