@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Brand;
 use App\Models\Category;
+use App\Models\Product;
+use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
@@ -21,19 +22,32 @@ class ProductController extends Controller
                 'category' => $category
             ]);
         } else {
-            $category = "";
-            return view("products.detail", compact('id', 'category'));
+            return view("products.detail", compact('id','category'));
         }
-
     }
 
     function create()
     {
         $brands = Brand::all();
         $categories = Category::all();
-        return view("products.create",[
+
+        return view("products.create", [
             'brands' => $brands,
             'categories' => $categories
         ]);
+    }
+
+    function store(Request $request){
+
+        $product = new Product();
+        $product->name = $request->get('name');
+        $product->description = $request->get('description');
+        $product->price = $request->get('price');
+        $product->category_id = $request->get('category');
+        $product->brand_id = $request->get('brand');
+
+        $product->save();
+
+        return "PRODUCT SAVED!!!!";
     }
 }

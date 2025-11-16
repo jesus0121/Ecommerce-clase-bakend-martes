@@ -5,7 +5,9 @@
 
     <div class="card">
         <div class="card-body">
-            <form>
+            <form action="{{route('admin.products.store')}}" method="POST">
+                @csrf
+                
                 <!-- Nombre Producto -->
                 <div class="input-group input-group-outline mb-3">
                     <label for="productName" class="form-label">Product Name</label>
@@ -23,8 +25,8 @@
                 </div>
                 <!-- Categoría Producto -->
                 <div class="input-group input-group-outline mb-3">
-                    <select class="form-control" id="productCategory">
-                        <option value="" selected disabled>-- Category --</option>
+                    <select class="form-control" id="productCategory" name="category">
+                        <option selected disabled>-- Category --</option>
                         @foreach ($categories as $item)
                             <option value="{{ $item->id }}">{{ $item->name }} </option>
                         @endforeach
@@ -32,8 +34,8 @@
                 </div>
                 <!-- Marca Producto -->
                 <div class="input-group input-group-outline mb-3">
-                    <select class="form-control" id="productBrand">
-                        <option value="" selected disabled>-- Brand --</option>
+                    <select class="form-control" id="productBrand" name="brand">
+                        <option selected disabled>-- Brand --</option>
                         @foreach ($brands as $item)
                             <option value="{{ $item->id }}">{{ $item->name }} </option>
                         @endforeach
