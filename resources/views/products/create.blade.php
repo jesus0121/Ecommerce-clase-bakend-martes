@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 
 @section('content')
-    <h1>Registrar Producto</h1>
+    <h1>New Product</h1>
 
     <div class="card">
         <div class="card-body">
