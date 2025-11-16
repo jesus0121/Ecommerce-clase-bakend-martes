@@ -30,7 +30,7 @@
                 @enderror
                 <div class="input-group input-group-outline mb-3">
                     <label for="productPrice" class="form-label">Price</label>
-                    <input type="number" class="form-control" id="productPrice" name="price" value="{{old('price')}}">
+                    <input type="text" class="form-control" id="productPrice" name="price" value="{{old('price')}}">
                 </div>
                 <!-- Categoría Producto -->
                 @error('category')

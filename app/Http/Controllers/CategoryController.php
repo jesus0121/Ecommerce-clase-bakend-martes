@@ -11,11 +11,30 @@ class CategoryController extends Controller
         return view("admin.categories.create");
     }
 
+    public function table(){
+        
+        $categories = Category::orderBy('id', 'desc')->paginate(10);
+
+        return view('admin.categories.table',[
+            'categories'=>$categories
+        ]);
+    }
+
     public function store(Request $request){
+
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
 
         Category::create([
             'name' => $request->get('name')
         ]);
-        return "Se guardo XDXDXD";
+        return redirect()->route('admin.categories.table');
+    }
+
+    function delete(category $category)
+    {
+        $category->delete();
+        return redirect()->back();
     }
 }

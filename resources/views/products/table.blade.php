@@ -6,6 +6,8 @@
 
         <div class="card-body">
             <h3>Products List</h3>
+
+            <a type="button" class="btn btn-success" href="{{route('admin.products.create')}}">Add new product</a>
             <table class="table align-items-center mb-0">
                 <thead>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center">Id</th>
@@ -48,7 +50,13 @@
                                 {{$product->updated_at}}
                             </td>
                             <td>
-                                <a style="color:red" href="#">Delete</a>
+                                <form action="{{ route('products.delete', $product) }}" method="POST" style="display:inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" style="color:red; background:none; border:none; cursor:pointer;">
+                                        Delete
+                                    </button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach

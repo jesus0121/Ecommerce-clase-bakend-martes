@@ -9,9 +9,26 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    function index()
+    function index(Request $request)
     {
-        return view('products.index');
+        $categories = Category::all();
+
+        $categoryId = $request->get('category');
+
+        $query = Product::with(['brand', 'category'])
+            ->orderBy('id', 'desc');
+
+        if ($categoryId) {
+            $query->where('category_id', $categoryId);
+        }
+        
+        $products = $query->paginate(12);
+
+        return view('products.index', [
+            'products' => $products,
+            'categories' => $categories,
+            'selectedCategory' => $categoryId
+        ]);
     }
 
     function detail($id, $category = null)
@@ -42,9 +59,9 @@ class ProductController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
-            'price' => 'required|numeric',
-            'category' => 'required|exists:categories.id',
-            'brand' => 'required|exists:brands.id',
+            'price' => 'required|numeric|min:0|max:999999.99',
+            'category' => 'required|exists:categories,id',
+            'brand' => 'required|exists:brand,id',
         ]);
 
         $product = new Product();
@@ -56,7 +73,7 @@ class ProductController extends Controller
 
         $product->save();
 
-        return "PRODUCT SAVED!!!!";
+        return redirect() ->route('admin.products.table');
     }
     public function table(){
 
@@ -65,5 +82,11 @@ class ProductController extends Controller
         return view('products.table',[
             'products' => $products
         ]);
+    }
+
+    function delete(product $product)
+    {
+        $product->delete();
+        return redirect()->back();
     }
 }
